@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.runBlocking
 
 fun main(): Unit = runBlocking {
-  // flowOf() is like flow() but it contains many values
+  // flowOf() is like flow() but it contains many values ~ iterable
   val flow1: Flow<Int> = flowOf(1, 2, 3, 4, 5)
   flow1.collect { value: Int -> print("$value ") }
 
