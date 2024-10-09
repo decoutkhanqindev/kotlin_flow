@@ -9,7 +9,7 @@ fun createFlows1(): Flow<Int> = flow {
   println("Flow ID: ${Random().nextInt(100)}")
   for (i in 1..3) {
     delay(1000)
-    emit(i)
+    emit(i) // like return value i
   }
 }
 
