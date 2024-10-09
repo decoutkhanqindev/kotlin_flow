@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.runBlocking
 import java.util.Random
 
-// when flow was collected, block code of flow{} can run -> cold flow
+// when flow was collected -> use collect(), block code of flow{} can run -> cold flow
 fun createFlows1(): Flow<Int> = flow {
   println("Flow ID: ${Random().nextInt(100)}")
   for (i in 1..3) {
