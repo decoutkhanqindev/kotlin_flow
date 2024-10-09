@@ -54,9 +54,9 @@ fun main(): Unit = runBlocking {
   launch {
     createWebSocketCallback()
       .cancellable()
-      .collect { message: String ->
-        println("message: $message")
-        if (message == "A1") {
+      .collect { value: String ->
+        println("value: $value")
+        if (value == "A1") {
           cancel()
         }
       }
