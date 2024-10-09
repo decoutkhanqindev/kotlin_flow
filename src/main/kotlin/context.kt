@@ -34,6 +34,7 @@ fun main(): Unit = runBlocking {
 
 //  val flow1: Flow<Int> = wrongSwitchContextInFlow()
 //  flow1.collect { value: Int -> println(value) }
+
 //  // it will throw an exception, because the block code in flow{} must preserve context
 //  // to fix -> use flowOn()
 
