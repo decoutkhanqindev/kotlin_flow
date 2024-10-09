@@ -38,7 +38,6 @@ private fun createWebSocketCallback(): Flow<String> = callbackFlow {
   println("service is register")
   service.registerWebSocketCallback(webSocketCallback)
 
-  service.sendMessage("A")
   service.sendMessage("A1")
   service.sendMessage("A2")
   service.sendMessage("A3")
@@ -56,7 +55,7 @@ fun main(): Unit = runBlocking {
       .cancellable()
       .collect { value: String ->
         println("value: $value")
-        if (value == "A1") {
+        if (value == "A3") {
           cancel()
         }
       }
