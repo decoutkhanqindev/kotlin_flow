@@ -11,7 +11,7 @@ interface WebSocketCallback {
 }
 
 class ServiceTesting {
-  private var webSocket: WebSocketCallback? = null;
+  private var webSocket: WebSocketCallback? = null
 
   fun registerWebSocketCallback(callback: WebSocketCallback) {
     this.webSocket = callback
@@ -22,7 +22,7 @@ class ServiceTesting {
   }
 
   fun sendMessage(value: String) {
-    webSocket?.receiveMessage(value);
+    webSocket?.receiveMessage(value)
   }
 }
 
