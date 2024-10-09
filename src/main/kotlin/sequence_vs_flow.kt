@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-// sequences is a synchronous -> block main thread
+// sequences is a synchronous data stream-> block main thread
 fun createSequences(): Sequence<Int> = sequence {
   for (i in 1..3) {
     Thread.sleep(1000)
@@ -12,7 +12,7 @@ fun createSequences(): Sequence<Int> = sequence {
   }
 }
 
-// flow is an asynchronous -> non block main thread
+// flow is an asynchronous data stream -> non block main thread
 fun createFlows(): Flow<Int> = flow {
   for (i in 1..3) {
     delay(1000)
