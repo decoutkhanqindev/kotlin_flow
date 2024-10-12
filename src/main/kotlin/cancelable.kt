@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.runBlocking
 import kotlin.coroutines.cancellation.CancellationException
 
-fun main(): Unit = runBlocking() {
+fun main(): Unit = runBlocking {
   (1..3).asFlow()
     .onCompletion { it: Throwable? ->
       if (it is CancellationException) {
