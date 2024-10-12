@@ -12,6 +12,9 @@ class EventBus<Event> {
   // SharedFlow is a hot flow that shares emitted values among all its collectors in a broadcast fashion,
   // so that all collectors get all emitted values
 
+  // MutableSharedFlow is a SharedFlow that also provides the abilities to emit a value, to tryEmit without suspension
+  // if possible, to track the subscriptionCount, and to resetReplayCache.
+
   // private mutable
   // MutableLiveData
   // Subject
