@@ -16,6 +16,7 @@ fun main(): Unit = runBlocking {
     replay = 0, // the number of values replayed to new subscribers (cannot be negative, defaults to zero).
     extraBufferCapacity = 8, // the number of values buffered in addition to `replay`.
     onBufferOverflow = BufferOverflow.SUSPEND //  configures an emit action on buffer overflow.
+    // SUSPEND will suspend on buffer overflow.
   )
 
 //  Buffer overflow can happen only when there is at least one subscriber that is not ready to accept
