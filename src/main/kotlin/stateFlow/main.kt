@@ -44,6 +44,15 @@ class ViewModel {
     // for multi threading
     _stateFLow.update { it + 1 }
   }
+
+  fun doSomething() {
+    scope.launch {
+      // call api or update
+      val data = 100
+      delay(1000) // delay by network
+      _stateFLow.value = data
+    }
+  }
 }
 
 fun main(): Unit = runBlocking {
