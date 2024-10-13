@@ -28,7 +28,6 @@ fun getUpstreamColdFlow(): Flow<Int> = flow {
   println("getUpstreamColdFlow completed emitting")
 }
 
-
 fun main(): Unit = runBlocking {
   val upstreamColdFlow: Flow<Int> = getUpstreamColdFlow()
   val scope: CoroutineScope = CoroutineScope(Dispatchers.IO)
