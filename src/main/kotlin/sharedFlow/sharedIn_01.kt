@@ -30,9 +30,9 @@ fun main(): Unit = runBlocking {
   val upstreamColdFlow: Flow<Int> = getUpstreamColdFlow()
   val scope: CoroutineScope = CoroutineScope(Dispatchers.IO)
 
-//  shareIn will convert a _cold_ [Flow] into a _hot_ [SharedFlow] that is started in the given coroutine [scope],
-//  sharing emissions from a single running instance of the upstream flow with multiple downstream subscribers,
-//  replaying a specified number of [replay] values to new subscribers.
+  //  shareIn will convert a _cold_ [Flow] into a _hot_ [SharedFlow] that is started in the given coroutine [scope],
+  //  sharing emissions from a single running instance of the upstream flow with multiple downstream subscribers,
+  //  replaying a specified number of [replay] values to new subscribers.
 
   val sharedFlow: SharedFlow<Int> = upstreamColdFlow.shareIn(
     scope = scope, // the coroutine scope in which sharing is started.
