@@ -1,5 +1,0 @@
-package sharedFlow
-
-fun main() {
-
-}
