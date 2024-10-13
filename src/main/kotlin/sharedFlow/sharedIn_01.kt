@@ -16,14 +16,14 @@ import kotlinx.coroutines.runBlocking
 
 // cold flow
 fun getUpstreamColdFlow(): Flow<Int> = flow {
-  println("getUpstreamColdFlow started collecting")
+  println("getUpstreamColdFlow started emitting")
   repeat(5) {
     println("Emitting $it")
     emit(it)
     delay(1000)
   }
 }.onCompletion {
-  println("getUpstreamColdFlow completed collecting")
+  println("getUpstreamColdFlow completed emitting")
 }
 
 fun main(): Unit = runBlocking {
