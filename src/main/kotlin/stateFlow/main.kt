@@ -66,7 +66,7 @@ fun main(): Unit = runBlocking {
   // but always collects the most recently emitted value.
 
   // val stateFlow: StateFlow<Int> = TODO()
-  // always have current value
+  // always have current value with initial value = any
   // conflated -> DROP_OLDEST
   // replay 1
   // distinctUntilChanged
