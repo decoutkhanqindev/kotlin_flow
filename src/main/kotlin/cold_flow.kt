@@ -15,7 +15,7 @@ fun createFlows1(): Flow<Int> = flow {
 
 fun main(): Unit = runBlocking {
   val flow1: Flow<Int> = createFlows1()
-  flow1.collect { println("value 1: $it") }
+  flow1.collect { println("value 1: ${it + 2}") }
 
   val flow2: Flow<Int> = createFlows1()
   flow2.collect { println("value 2: $it") }

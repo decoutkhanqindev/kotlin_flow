@@ -19,6 +19,9 @@ fun main(): Unit = runBlocking {
 //
 //  println("Flow started") // -> this line will be suspended by collect
 
+    // fix
+
+   // 1
 //  uiScope.launch {
 //  (1..3).asFlow()
 //    .flowOn(Dispatchers.IO)
@@ -29,6 +32,7 @@ fun main(): Unit = runBlocking {
 
   // or
 
+  // 2
   (1..3).asFlow()
     .flowOn(Dispatchers.IO)
     .onEach {

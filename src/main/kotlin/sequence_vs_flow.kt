@@ -32,7 +32,7 @@ fun main(): Unit = runBlocking {
 //    println("Sequences: $it")
 //  }
 
-  // when flow was collected, block code of flow{} can run -> cold observable
+  // when flow was collected, block code of flow{} can run -> cold FLow
   createFlows().collect { value: Int ->
     println("Flow: $value")
   }
