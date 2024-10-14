@@ -86,6 +86,7 @@ fun main(): Unit = runBlocking {
 
   delay(3000)
 
+  // 0 -> 1 -> 2 -> 3 -> [4] === collect 4
   vm.stateFlow
     .onEach { println("[2] collect: $it stateFlow.value=${vm.stateFlow.value}") }
     .launchIn(this)
