@@ -30,7 +30,7 @@ fun getUpstreamColdFlow(): Flow<Int> = flow {
 
 fun main(): Unit = runBlocking {
   val upstreamColdFlow: Flow<Int> = getUpstreamColdFlow()
-  val scope: CoroutineScope = CoroutineScope(Dispatchers.IO)
+  val scope = CoroutineScope(Dispatchers.IO)
 
   // Converts a _cold_ [Flow] into a _hot_ [StateFlow] that is started in the given coroutine [scope],
   // sharing the most recently emitted value from a single running instance of the upstream flow with multiple
