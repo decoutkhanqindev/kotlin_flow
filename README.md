@@ -2,7 +2,7 @@
 
 ## 📃 Introduction
 
-This is a sample project to help you learn and practice the key concepts of **Kotlin Flow**. Each file and folder in the project is a practical example, demonstrating how to use different types of Flow, Channel, StateFlow, SharedFlow, as well as common operators and patterns in asynchronous programming with Kotlin.
+This is a sample project to help you learn and practice the key concepts of Kotlin Flow. Each file and folder in the project is a practical example, demonstrating how to use different types of Flow, Channel, StateFlow, SharedFlow, as well as common operators and patterns in asynchronous programming with Kotlin.
 
 ## 🏆 Main Topics
 
